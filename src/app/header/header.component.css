@@ -1,11 +1,14 @@
 .header{
     padding: 5px 20px;
-    background: royalblue;
+    background-image: url("../../assets/img/index.jpeg");
   }
   
   .title{
-    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+    color:red;
     text-decoration: none;
+ 
+
   }
   .login,.register{
     float: right;
@@ -18,4 +21,5 @@
     color: aliceblue;
     padding-top: 10px;
     text-decoration: none;
+   
   }

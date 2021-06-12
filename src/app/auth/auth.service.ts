@@ -11,7 +11,7 @@ import {LocalStorageService} from 'ngx-webstorage';
 })
 export class AuthService {
 
-  private url = 'http://localhost:8080/api/auth/';
+  private url = 'https://trb-backend.herokuapp.com/api/auth/';
  
 
   constructor(private httpClient: HttpClient,private localStoraqeService: LocalStorageService) {

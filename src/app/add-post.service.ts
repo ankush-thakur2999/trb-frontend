@@ -10,9 +10,12 @@ export class AddPostService {
 
   constructor(private httpClient:HttpClient) { }
   addPost(postPayload:PostPayload){
-    return this.httpClient.post('http://localhost:8080/api/posts/', postPayload);
+    return this.httpClient.post('https://trb-backend.herokuapp.com/api/posts/', postPayload);
   }
   getAllPosts(): Observable<Array<PostPayload>>{
-    return this.httpClient.get<Array<PostPayload>>("http://localhost:8080/api/posts/all");
+    return this.httpClient.get<Array<PostPayload>>("https://trb-backend.herokuapp.com/api/posts/all");
+  }
+  getPost(permaLink: Number):Observable<PostPayload>{
+    return this.httpClient.get<PostPayload>('https://trb-backend.herokuapp.com/api/posts/get/' + permaLink);
   }
 }
