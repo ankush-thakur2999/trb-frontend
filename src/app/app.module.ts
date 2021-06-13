@@ -40,7 +40,7 @@ import { AuthGuard } from './auth.guard';
       {
         path:'register',component:RegisterComponent},
         {
-          path:'post/:id',component:PostComponent},
+          path:'post/:id',component:PostComponent,canActivate:[AuthGuard]},
       {path:'register-success',component: RegisterSuccessComponent},
       {path:'login',component:LoginComponent},
       {path:'home',component:HomeComponent},

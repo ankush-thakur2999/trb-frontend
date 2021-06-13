@@ -13,7 +13,7 @@ export class AddPostService {
     return this.httpClient.post('https://trb-backend.herokuapp.com/api/posts/', postPayload);
   }
   getAllPosts(): Observable<Array<PostPayload>>{
-    return this.httpClient.get<Array<PostPayload>>("https://trb-backend.herokuapp.com/api/posts/all");
+    return this.httpClient.get<Array<PostPayload>>('https://trb-backend.herokuapp.com/api/posts/all');
   }
   getPost(permaLink: Number):Observable<PostPayload>{
     return this.httpClient.get<PostPayload>('https://trb-backend.herokuapp.com/api/posts/get/' + permaLink);
